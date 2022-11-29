@@ -159,7 +159,7 @@ body {
 }
 
 .sidebar .toggle i {
-
+    transition: .4s linear;
 } 
 
 .sidebar.open .toggle i {
