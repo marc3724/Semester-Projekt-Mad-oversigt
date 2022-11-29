@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.listen(3000);
 
 //middleware mm
-app.use(express.static('/Billeder'));
+app.use(express.static('public'));
 
 app.get('/', (req,res)=>{
 res.render('index');
