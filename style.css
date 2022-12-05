@@ -12,6 +12,13 @@ body {
     font-family:system-ui, sans-serif;
 }
  /*----nav start----*/
+
+li a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
  
 .sidebar {
     width: 120px;
@@ -95,7 +102,7 @@ body {
 }
 
 .sidebar nav .nav-item.active {
-    background: #ff328e !important;
+    background: lightgray !important;
 }
 
 .sidebar nav .nav-item:hover {
