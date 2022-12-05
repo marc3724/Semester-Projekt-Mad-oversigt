@@ -1,13 +1,11 @@
 const express = require('express');
-con
+
 
 // express variabel
 const app = express();
 
 //view Engine tjekker view-folder
 app.set('view engine', 'ejs');
-
-
 
 //listen
 app.listen(3000);
@@ -25,8 +23,13 @@ app.get('/opskrifter', (req,res)=>{
 
 
 app.get('/kategorier', (req,res)=>{
+  //  res.write('hey');
+    //res.end();
+   // document.getElementById('opskrift').innerHTML="hey";
     res.render('kategorier');
+
     });
+    
 
 app.use((req,res)=>{
     res.render('index');
