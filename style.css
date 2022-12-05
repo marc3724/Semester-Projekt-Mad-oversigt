@@ -6,19 +6,16 @@
     list-style: none;
     box-sizing: border-box ;
 }
- /*----nav start----*/
- 
+
 body {
     height: 100vh;
-    background-image: url(public/Food.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     font-family:system-ui, sans-serif;
 }
-
+ /*----nav start----*/
+ 
 .sidebar {
     width: 120px;
-    height:200%;
+    height:100%;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     background: rgba(10, 10, 10, .65);
@@ -28,7 +25,7 @@ body {
 }
 
 .sidebar.open {
-    width: 360px;
+    width: 300px;
 }
 
 .sidebar .logo {
