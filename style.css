@@ -6,7 +6,8 @@
     list-style: none;
     box-sizing: border-box ;
 }
-
+ /*----nav start----*/
+ 
 body {
     height: 100vh;
     background-image: url(Food.jpg);
@@ -165,3 +166,11 @@ body {
 .sidebar.open .toggle i {
     transform: rotate(180deg);
 }
+
+/*----nav slut----*/
+
+/*----Header start----*/
+
+
+
+/*----Header Slut----*/
