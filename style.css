@@ -171,6 +171,12 @@ li a{
     transform: rotate(180deg);
 }
 
+.copyright{
+    position: fixed;
+    bottom: 0;
+    font-size: 10px;
+}
+
 /*----nav slut----*/
 
 /*----Header start----*/
