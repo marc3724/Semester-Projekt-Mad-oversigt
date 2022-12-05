@@ -1,5 +1,5 @@
 const express = require('express');
-
+con
 
 // express variabel
 const app = express();
@@ -21,6 +21,11 @@ res.render('index');
 
 app.get('/opskrifter', (req,res)=>{
     res.render('opskrifter');
+    });
+
+
+app.get('/kategorier', (req,res)=>{
+    res.render('kategorier');
     });
 
 app.use((req,res)=>{
