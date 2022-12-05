@@ -162,10 +162,10 @@ li a{
 .sidebar.open .toggle {
     transform: translate(45px);
 }
-
+/*
 .sidebar .toggle i {
 
-} 
+}*/
 
 .sidebar.open .toggle i {
     transform: rotate(180deg);
