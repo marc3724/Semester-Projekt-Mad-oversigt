@@ -10,7 +10,7 @@
  
 body {
     height: 100vh;
-    background-image: url(Food.jpg);
+    background-image: url(public/Food.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family:system-ui, sans-serif;
@@ -18,7 +18,7 @@ body {
 
 .sidebar {
     width: 120px;
-    height: 100%;
+    height:200%;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     background: rgba(10, 10, 10, .65);
