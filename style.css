@@ -18,7 +18,7 @@ body {
 
 .sidebar {
     width: 120px;
-    height:200%;
+    height:100%;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     background: rgba(10, 10, 10, .65);
