@@ -1,34 +1,48 @@
 <html>
     <head>
-        <title>index</title>
+        <title>Forside</title>
         <meta charset="uft-8"/>
         <meta name="description" content=""/>
         <Link rel="shortcut icon" type="image/x-icon" href="public/Chefhat.png"></Link>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div style="width:auto; height:auto;">
-            <div>
-                <div style="float:left;margin-left: 32px;">
-                    <a href="Index.html" ><img src="public/Chefhat.png" alt="Logo til main" width="128" height="128" ></a>
-                </div>
-                <div style="width:auto; height:128px ;text-align:center; margin-top: 32px; font-size: 48px;">
-                    <h1><b>Fridge App</b></h1><br>
-                </div>
+
+        <div class="sidebar open">
+            <div class="toggle">
+                <img src="public/arrow.png" alt="toggle-arrow"width="18" color="white">
             </div>
 
-            <div style="float:left; font-size: 32px;margin-right: 32px;">
-                <a href="Main.html" target="Iframe">main</a><br>
-                <a href="Kategorier.html" target="Iframe">Kategorier</a><br>
-                <a href="opskrifter.html" target="Iframe">Opskrifter</a><br>
-                <a href="Login.html" target="Iframe">Login</a><br>
+            <div class="logo">
+                <li><a href="Index.html"><img src="public/Chefhat.png" alt="..."></a></li>
+                <h3>Menu</h3>
             </div>
+            <nav>
+                <ul>
+                    <li class="nav-item active">
+                        <a href="News.html"><img src="public/news.png" alt="news"width="18"></a>
+                        <span>Forside</span>
+                    </li>
+                </ul>
 
-            <div>
-                <iframe src="Main.html" style="width:80%; height:80%;"name="Iframe"></iframe>
-            </div>
-        </div>
-        
+                
+                <!--<div class="nav-title">
+                    Supports
+                </div>
+                <ul>
+                    <li class="nav-item">
+                        <img src="public/news.png" alt="news"width="18">
+                        <span>Get Help</span>
+                    </li>
+                    <li class="nav-item">
+                        <img src="public/news.png" alt="news"width="18">
+                        <span>Send Feedback</span>
+                    </li>
+                </ul>-->
+
+            </nav>
+
+        </div>       
         
     </body>
 </html>
-Billeder/Good_Food_Display_-_NCI_Visuals_Online.jpg
