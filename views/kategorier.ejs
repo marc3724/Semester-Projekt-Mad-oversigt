@@ -8,10 +8,22 @@
 <body>
   <h1>Velkommen til kategorier</h1>
 
+
   
-  <div id="opskrift">her kommer api</div>
-  <script src="mongoDB.js">  </script>
-  
+  <% if (kategorier.length > 0) { %>
+    <% kategorier.forEach(kat => { %>
+      <h3 class="gruppe"><%= kat.gruppe %></h3>
+      <p class="vare"><%= kat.vare %></p>
+    <% }) %>
+  <% } else { %>
+    <p>There are no blogs to display...</p>
+  <% } %>
+
+  <div id="kategori">her kommer api</div>
+
+ 
+
+
   <%- include('./partials/footer.ejs')  %> 
  
  

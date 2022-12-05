@@ -1,6 +1,6 @@
 // Gratis test api med array
 
-//document.getElementById("opskrift").innerHTML="ændring" 
+document.getElementById("kategori").innerHTML="ændring" 
 
 
 let fakeURL = 'http://fakestoreapi.com/products';
@@ -16,7 +16,7 @@ let fakeURL = 'http://fakestoreapi.com/products';
  complete.map((values)=>{
    data1 += `<p>${values.title}</p>`
  });
- document.getElementById("opskrift").innerHTML=data1;
+ document.getElementById("kategori").innerHTML=data1;
 }) 
 .catch((err)=>{
  console.log(err);
