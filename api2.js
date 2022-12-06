@@ -2,7 +2,7 @@
 
 let dataAPIen ;
 
-
+function fakeURL(){
 let fakeURL = 'http://fakestoreapi.com/products';
 
  //map funktion som virker på fakeApi
@@ -21,4 +21,6 @@ let fakeURL = 'http://fakestoreapi.com/products';
 .catch((err)=>{
  console.log(err);
 })
+}
+
 
