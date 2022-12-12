@@ -180,6 +180,18 @@ li a{
 
 /*----nav slut----*/
 
+/*----Index Start----*/
+
+.newsIndhold { 
+    float: left;
+}
+
+.artikel {
+    padding: 20px;
+}
+
+/*----Index Slut----*/
+
 
 
 /*----Header start----*/
