@@ -33,6 +33,7 @@ li a{
 
 .sidebar.open {
     width: 300px;
+    float: left;
 }
 
 .sidebar .logo {
