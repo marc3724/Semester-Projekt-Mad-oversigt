@@ -7,7 +7,44 @@
 </head>
 <body>
   <h1>Velkommen til kategorier</h1>
+
+
+<% if (kategorier.length > 0) { %>
+<table>
+  <tr>
+    <% kategorier.forEach(kat => { %>
+      <th class="gruppe"><%= kat.gruppe %></th>
+    <% }) %>
+  </tr>
+  <tr>
+  <% kategorier.forEach(kat => { %>
+    <td class="vare"><%= kat.vare %></td>
+  <% }) %>
+</tr>
+</table>
+<% } else { %>
+  <p>Der er ingen vare på hylderne...</p>
+<% } %>
+
+<br>
+
+  <% if (kategorier.length > 0) { %>
+    <% kategorier.forEach(kat => { %>
+      <h3 class="gruppe"><%= kat.gruppe %></h3>
+      <p class="vare"><%= kat.vare %></p>
+    <% }) %>
+  <% } else { %>
+    <p>Der er ingen vare på hylderne...</p>
+  <% } %>
+
+  <div id="kategori">her kommer api</div>
+  <br><br>
+ 
+ 
+
+
   <%- include('./partials/footer.ejs')  %> 
-  
+ 
+ 
 </body>
 </html>
