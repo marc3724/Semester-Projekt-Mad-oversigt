@@ -1,5 +1,5 @@
 const sidebar = document.querySelector('.sidebar');
-const navItem = document.querySelector('nav .nav-item');
+const navItem = document.querySelectorAll('nav .nav-item');
 const toggle = document.querySelector('.slider .toggle');
 
 toggle.addEventListener('click', () => {
@@ -8,6 +8,19 @@ toggle.addEventListener('click', () => {
         sidebar.classList.add('open');
     else
         sidebar.classList.remove('open');
+        
 });
 
-va
+navItem.forEach(navItem => {
+
+    navItem.addEventListener('click',() => {
+
+        navItem.forEach(navItem => {
+            sidebar.classList.remove('active')
+        });
+
+        sidebar.classList.add('active')
+
+    });
+
+});

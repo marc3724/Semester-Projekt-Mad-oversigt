@@ -33,6 +33,7 @@ li a{
 
 .sidebar.open {
     width: 300px;
+    float: left;
 }
 
 .sidebar .logo {
@@ -178,6 +179,20 @@ li a{
 }
 
 /*----nav slut----*/
+
+/*----Index Start----*/
+
+.newsIndhold { 
+    float: left;
+}
+
+.artikel {
+    padding: 20px;
+}
+
+/*----Index Slut----*/
+
+
 
 /*----Header start----*/
 
