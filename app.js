@@ -24,11 +24,12 @@ connecting();
 app.set('view engine', 'ejs');
 
 //listen
-app.listen(3000, ()=>[console.log('Server startet on port 3000')]);
+app.listen(3000, ()=>console.log('Server startet on port 3000'));
 
 //middleware mm
 app.use(express.static('public'));
 
+//Router
 
 app.get('/', (req,res)=>{
 
