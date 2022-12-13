@@ -11,6 +11,8 @@ toggle.addEventListener('click', () => {
         
 });
 
+/* ClassList can be changed to className and change the open to add Sidebar open/sidebar */
+
 navItem.forEach(navItem => {
 
     navItem.addEventListener('click',() => {

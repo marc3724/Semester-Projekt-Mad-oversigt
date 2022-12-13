@@ -29,6 +29,7 @@ li a{
     box-shadow: 0 8px 32px rgb(2, 4, 24);
     border-right: 2px solid rgba(255, 255, 255, .09);
     transition: .4s ease-in-out;
+    position: fixed;
 }
 
 .sidebar.open {
@@ -176,6 +177,7 @@ li a{
     position: fixed;
     bottom: 0;
     font-size: 10px;
+    margin-bottom: 10px;
 }
 
 /*----nav slut----*/
@@ -183,7 +185,7 @@ li a{
 /*----Index Start----*/
 
 .newsIndhold { 
-    float: left;
+    margin-left: 300px;
 }
 
 .artikel {
