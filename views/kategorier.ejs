@@ -4,11 +4,25 @@
     <%- include('./partials/head.ejs')  %> 
 
     <%- include('./partials/nav.ejs')  %> 
+
+   
 </head>
 <body>
   <div class="newsIndhold"> 
   <h1>Velkommen til kategorier</h1>
 
+  <div class="create-blog content">
+    <form id="form" >
+      <label >Fødevare:</label>
+      <input type="title" id="title" name="title">
+      <label>Kategori:</label>
+      <input type="author" id="author" name="author">
+  
+      <input type="button" id="knap"  onclick= createBlogFunktion();>Klik her</input>
+    </form>
+  </div>
+
+<!--Tabel fra DB-->
 
 <% if (kategorier.length > 0) { %>
 <table>
