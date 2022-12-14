@@ -32,8 +32,7 @@ app.use(express.static('public'));
 //Router
 
 app.get('/', (req,res)=>{
-
-res.render('index');
+res.render('index2');
 });
 
 app.get('/opskrifter', (req,res)=>{
@@ -46,8 +45,8 @@ app.get('/kategorier', (req,res)=>{
 
 
 app.use((req,res)=>{
-    res.render('index');
-})
+    res.render('index2');
+});
 
 
 const kategorier = [
