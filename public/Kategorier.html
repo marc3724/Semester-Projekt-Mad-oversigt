@@ -5,24 +5,18 @@
         <meta name="description" content=""/>
         <Link rel="shortcut icon" type="image/x-icon" href="img/Chefhat.png"></Link>
         <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+        <script  src="code.js"></script>
+    </head> 
+    <body onload="udskrivAlle1();">
 
         <div class="sidebar open">
 
-            <div class="toggle">
-                <img src="img/arrow.png" alt="toggle-arrow"width="18" color="white">
-            </div>
-
+           
             <div class="logo">
-                <li><a href="Main.html"><img src="img/Chefhat.png" alt="..."></a></li>
+                <li><a href="/"><img src="img/Chefhat.png" alt="..."></a></li>
                 <h3>Kategorier</h3>
             </div>
 
-            <div class="logo">
-                <li><a href="Main.html"><img src="img/Chefhat.png" alt="..."></a></li>
-                <h3>Menu</h3>
-            </div>
             <nav>
                 <ul>
                     <li class="nav-item active">
@@ -48,5 +42,42 @@
                 </ul>
             </nav>
         </div> 
+
+
+
+     <div class="newsIndhold">
+       <form id="form" >
+      <label >Fødevare:</label>
+      <input type="food" id="food" name="food">
+      <label>Kategori:</label>
+      <input type="kategori" id="kategori" name="kategori">
+      <label>Placering:</label>
+      <input type="location" id="location" name="location">
+      <label>Udløbsdato:</label>
+      <input type="expire" id="expire" name="expire">
+     
+         <input type="button" id="knap" onclick="createBlogFunktion();">Klik her</input>
+       </form>
+     </div>
+
+     <div class="newsIndhold">
+     <table>
+        <tr>
+            <td>food</td>
+            <td>kategori</td>
+            <td>location</td>
+            <td>expire</td>
+        </tr>
+    </table>
+    </div>  
+         
+        <div class="newsIndhold" id="tekstfelt">
+        <p></p>
+        </div>
+       
+
+      
+        </div>
+
     </body>
 </html>
