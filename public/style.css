@@ -202,3 +202,24 @@ li a{
 
 
 /*----Header Slut----*/
+
+/*Tabeller*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 600px;
+  }
+  
+  td, th {
+    width:600px;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+
+  }
