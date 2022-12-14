@@ -223,3 +223,9 @@ table {
     background-color: #dddddd;
 
   }
+
+  input{
+    border: 1px solid;
+    color: black;
+    min-width: 10px;
+  }
