@@ -2,11 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const blogSchema = new Schema({
-  title: {
+  food: {
     type: String,
     required: true,
   },
-  author: {
+  kategori: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  expire: {
     type: String,
     required: true,
   }

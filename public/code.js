@@ -56,10 +56,16 @@
            let html=`<table>`;
            data.forEach(blog => { 
            html+=`<tr><td>`;
-           html+=blog.title;
+           html+=blog.food;
            html+="</td>";
            html+="<td>";
-           html+=blog.author;
+           html+=blog.kategori;
+           html+="</td>";
+           html+="<td>";
+           html+=blog.location;
+           html+="</td>";
+           html+="<td>";
+           html+=blog.expire;
            html+="</td></tr>";
         });
         html+="</table>";
@@ -83,4 +89,5 @@
            .then(res => res.json())
            .then(data => console.log(data))
            .catch(err => console.log(err));
+           udskrivAlle1();
         }
