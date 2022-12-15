@@ -1,10 +1,28 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.1",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "mongodb": "^4.12.1",
     "mongoose": "^6.8.0",
-    "morgan": "^1.10.0",
-    "package.json": "^2.0.1"
-  }
+    "nodemon": "^2.0.20",
+    "package.json": "^0.0.0"
+  },
+  "name": "semester-projekt-mad-oversigt",
+  "description": "mad oversigt er en hjemmeside der er forbundet til en mongodb-server\r den fortæller hvornår noget mad er ved at ved at nå sin udløbs dato og foreslår opskrifter der bruger de ingredienser",
+  "version": "1.0.0",
+  "main": "Login.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marc3724/Semester-Projekt-Mad-oversigt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marc3724/Semester-Projekt-Mad-oversigt/issues"
+  },
+  "homepage": "https://github.com/marc3724/Semester-Projekt-Mad-oversigt#readme"
 }
