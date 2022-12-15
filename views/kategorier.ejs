@@ -4,10 +4,14 @@
     <%- include('./partials/head.ejs')  %> 
 
     <%- include('./partials/nav.ejs')  %> 
+    
 </head>
 <body>
+  <div class="newsIndhold"> 
   <h1>Velkommen til kategorier</h1>
 
+
+<!--Tabel fra DB-->
 
 <% if (kategorier.length > 0) { %>
 <table>
@@ -28,23 +32,12 @@
 
 <br>
 
-  <% if (kategorier.length > 0) { %>
-    <% kategorier.forEach(kat => { %>
-      <h3 class="gruppe"><%= kat.gruppe %></h3>
-      <p class="vare"><%= kat.vare %></p>
-    <% }) %>
-  <% } else { %>
-    <p>Der er ingen vare på hylderne...</p>
-  <% } %>
 
-  <div id="kategori">her kommer api</div>
   <br><br>
  
  
 
 
-  <%- include('./partials/footer.ejs')  %> 
- 
- 
+ </div>
 </body>
 </html>
