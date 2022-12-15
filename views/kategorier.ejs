@@ -4,10 +4,40 @@
     <%- include('./partials/head.ejs')  %> 
 
     <%- include('./partials/nav.ejs')  %> 
+    
 </head>
 <body>
+  <div class="newsIndhold"> 
   <h1>Velkommen til kategorier</h1>
-  <%- include('./partials/footer.ejs')  %> 
-  
+
+
+<!--Tabel fra DB-->
+
+<% if (kategorier.length > 0) { %>
+<table>
+  <tr>
+    <% kategorier.forEach(kat => { %>
+      <th class="gruppe"><%= kat.gruppe %></th>
+    <% }) %>
+  </tr>
+  <tr>
+  <% kategorier.forEach(kat => { %>
+    <td class="vare"><%= kat.vare %></td>
+  <% }) %>
+</tr>
+</table>
+<% } else { %>
+  <p>Der er ingen vare på hylderne...</p>
+<% } %>
+
+<br>
+
+
+  <br><br>
+ 
+ 
+
+
+ </div>
 </body>
 </html>
