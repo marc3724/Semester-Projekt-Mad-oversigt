@@ -194,7 +194,22 @@ li a{
 
 /*----Index Slut----*/
 
+/*----Table start----*/
 
+table {
+    margin-top: 20px;
+    float: right;
+    width: 1000px;
+    text-align: left;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+
+/*----Table end----*/
 
 /*----Header start----*/
 
