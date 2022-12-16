@@ -85,7 +85,7 @@
         });
         html+="</table>";
         //var x = document.getElementById("tekstfelt");
-        document.querySelector("p").innerHTML = html;
+        document.getElementById("tekstfelt").innerHTML = html;
         //document.getElementById("tekstfelt2").innerHTML="Hej";
     }
   
