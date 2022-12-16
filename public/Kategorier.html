@@ -45,7 +45,7 @@
 
 
 
-     <div class="newsIndhold">
+     <div class="kategoriInputs">
        <form id="form" >
       <label >Fødevare:</label>
       <input type="food" id="food" name="food">
@@ -56,17 +56,18 @@
       <label>Udløbsdato:</label>
       <input type="expire" id="expire" name="expire">
      
-         <input type="button" id="knap" onclick="createBlogFunktion();">Klik her</input>
+         <button type="button" id="knap" onclick="createBlogFunktion();">Klik her</button>
        </form>
      </div>
 
-     <div class="newsIndhold">
-     <table>
+     <div class="kategoriIndhold">
+     <table class="kategoriTableHead">
         <tr>
             <td>food</td>
             <td>kategori</td>
             <td>location</td>
             <td>expire</td>
+            <td></td>
         </tr>
     </table>
     </div>  

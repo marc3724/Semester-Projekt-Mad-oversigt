@@ -33,11 +33,18 @@
         }
   
   
-        function getDelete(){
-           const nr=document.getElementById("delid").value;
-            fetch('http://localhost:3000/slet/'+nr)
+        function getDelete(nr3){
+         console.log('getDelkete kører ---------');
+         console.log(nr3 );
+         //   const nr=document.getElementById("delid").value;
+
+         //   const nr2=document.getSelection._id.value;
+         
+            fetch('http://localhost:3000/slet/'+nr3)
            .then(res => console.log('Blog slettet'))
            .catch(err => console.log(err," Kunne ikke slette blog"));
+           udskrivAlle1();
+
         }
   
   
@@ -53,9 +60,14 @@
        async function udskrivAlle1(){
            let data = await getBlogs();
            console.log(data);
-           let html=`<table>`;
+           let id = "0";
+           let html=`<table id="kategoriTable">`;
            data.forEach(blog => { 
+
            html+=`<tr><td>`;
+         //   html+=blog._id;
+         //   html+="</td>";
+         //   html+="<td>";
            html+=blog.food;
            html+="</td>";
            html+="<td>";
@@ -66,6 +78,9 @@
            html+="</td>";
            html+="<td>";
            html+=blog.expire;
+           html+="</td>";
+           html+="<td>";
+           html+="<button type='button' onclick=getDelete('"+blog._id+"');>Slet</button>";
            html+="</td></tr>";
         });
         html+="</table>";
