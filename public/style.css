@@ -11,6 +11,8 @@
 body {
     height: 100vh;
     font-family:system-ui, sans-serif;
+    background-image:url('img/BackgroundFood.jpeg');
+    background-size:cover;
 }
  /*----nav start----*/
 
@@ -196,15 +198,7 @@ li a{
 
 /*----Index Slut----*/
 
-
-
-/*----Header start----*/
-
-
-
-/*----Header Slut----*/
-
-/*Tabeller*/
+/*----Tabeller Start----*/
 
 /*table {
     font-family: arial, sans-serif;
@@ -254,3 +248,5 @@ li a{
     color: black;
     min-width: 10px;
   }
+
+  /*----Tabeller Slut----*/
