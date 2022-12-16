@@ -200,11 +200,11 @@ li a{
 
 /*----Tabeller Start----*/
 
-/*table {
+table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 600px;
-  }*/
+}
 .kategoriTableHead{
     width: auto;
     border-collapse: collapse;
@@ -228,25 +228,25 @@ li a{
 #kategoriTable td{
     width: 20%;
     
-  }
+}
   
-  td, th {
+td, th {
     width:600px;
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
     
-  }
+}
   
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #dddddd;
 
-  }
+}
 
-  input{
+input{
     border: 1px solid;
     color: black;
     min-width: 10px;
-  }
+}
 
-  /*----Tabeller Slut----*/
+/*----Tabeller Slut----*/
