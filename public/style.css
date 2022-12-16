@@ -206,10 +206,34 @@ li a{
 
 /*Tabeller*/
 
-table {
+/*table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 600px;
+  }*/
+.kategoriTableHead{
+    width: auto;
+    border-collapse: collapse;
+}
+
+.kategoriTableHead td:last-child{
+    border:none;
+}
+
+.kategoriIndhold, .kategoriInputs { 
+    margin-left: 300px;
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+#kategoriTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#kategoriTable td{
+    width: 20%;
+    
   }
   
   td, th {
