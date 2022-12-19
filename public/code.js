@@ -60,15 +60,27 @@
        async function udskrivAlle1(){
            let data = await getBlogs();
            console.log(data);
+
+           let oldFood = `Udløber snart: \n`;
+           let anyOldFood = false;
+
            let id = "0";
            let html=`<table id="kategoriTable">`;
            data.forEach(blog => { 
             
+         // her testes
+         const date = new Date();
+         console.log("i dag "+date);
+         var d=new Date(blog.expire); 
+         console.log("mad dag "+ d);
 
-           html+=`<tr><td>`;
-         //   html+=blog._id;
-         //   html+="</td>";
-         //   html+="<td>";
+         if (d < date ){
+            oldFood+=blog.food+"\n";
+            anyOldFood=true;
+            html+=`<tr class="alert"><td>`;
+           }else{
+            html+=`<tr><td>`;
+           }
            html+=blog.food;
            html+="</td>";
            html+="<td>";
@@ -78,16 +90,17 @@
            html+=blog.location;
            html+="</td>";
            html+="<td>";
-           html+=blog.expire;
+           html+=d.getDate()+"/"+d.getMonth();
            html+="</td>";
            html+="<td>";
            html+="<button type='button' onclick=getDelete('"+blog._id+"');>Slet</button>";
            html+="</td></tr>";
         });
         html+="</table>";
-        //var x = document.getElementById("tekstfelt");
+        
         document.getElementById("tekstfelt").innerHTML = html;
-        //document.getElementById("tekstfelt2").innerHTML="Hej";
+
+        if (anyOldFood=true){alert(oldFood);}
     }
   
   
