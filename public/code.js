@@ -61,22 +61,18 @@
            let data = await getBlogs();
            console.log(data);
 
-           let oldFood = `Udløber snart: \n`;
-           let anyOldFood = false;
 
            let id = "0";
            let html=`<table id="kategoriTable">`;
            data.forEach(blog => { 
             
-         // her testes
+         //dato tjek
          const date = new Date();
          console.log("i dag "+date);
          var d=new Date(blog.expire); 
          console.log("mad dag "+ d);
 
          if (d < date ){
-            oldFood+=blog.food+"\n";
-            anyOldFood=true;
             html+=`<tr class="alert"><td>`;
            }else{
             html+=`<tr><td>`;
@@ -90,7 +86,7 @@
            html+=blog.location;
            html+="</td>";
            html+="<td>";
-           html+=d.getDate()+"/"+d.getMonth();
+           html+=d.getDate()+"/"+(d.getMonth()+1);
            html+="</td>";
            html+="<td>";
            html+="<button type='button' onclick=getDelete('"+blog._id+"');>Slet</button>";
@@ -100,9 +96,68 @@
         
         document.getElementById("tekstfelt").innerHTML = html;
 
-        if (anyOldFood=true){alert(oldFood);}
+        //oldFoodAllert();
+
     }
-  
+
+    async function overskredet(){
+      let data = await getBlogs();
+      console.log(data);
+
+      let id = "0";
+      let html=`<table id="kategoriTable">`;
+      data.forEach(blog => { 
+       
+    // her testes
+    const date = new Date();
+    console.log("i dag "+date);
+    var d=new Date(blog.expire); 
+    console.log("mad dag "+ d);
+
+    if (d.getDate() < (date.getDate()+3) ){
+      html+=`<tr class="alert"><td>`;
+      html+=blog.food;
+      html+="</td>";
+      html+="<td>";
+      html+=blog.kategori;
+      html+="</td>";
+      html+="<td>";
+      html+=blog.location;
+      html+="</td>";
+      html+="<td>";
+      html+=d.getDate()+"/"+(d.getMonth()+1);
+      html+="</td>";
+      html+="<td>";
+      html+="<button type='button' onclick=getDelete('"+blog._id+"');>Slet</button>";
+      html+="</td></tr>";
+   }
+   });
+   html+="</table>";
+   
+   document.getElementById("oldFood").innerHTML = html;
+
+}
+
+async function oldFoodAllert(){
+   let data = await getBlogs();
+   let oldFood = `Udløber snart: \n`;
+   let anyOldFood = false;
+
+   data.forEach(blog => {     
+ //dato tjek
+ const date = new Date();
+ console.log("i dag "+date);
+ var d=new Date(blog.expire); 
+ console.log("mad dag "+ d);
+
+ if (d < date ){
+    oldFood+=blog.food+"\n";
+    anyOldFood=true;
+    
+   }
+});
+   if (anyOldFood=true){alert(oldFood);}
+}
   
   
          function createBlogFunktion(){
