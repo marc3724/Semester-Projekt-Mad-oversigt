@@ -63,6 +63,7 @@
            let id = "0";
            let html=`<table id="kategoriTable">`;
            data.forEach(blog => { 
+            
 
            html+=`<tr><td>`;
          //   html+=blog._id;
