@@ -1,5 +1,9 @@
 
   
+  function loadKategorier(){
+   udskrivAlle1();
+   alertOldFood();
+  }
         function get(){
            const nr=document.getElementById("id").value;
            fetch('http://localhost:3000/blogs/'+nr)
@@ -15,9 +19,7 @@
          console.log('getDelkete kører ---------');
          console.log(nr3 );
          //   const nr=document.getElementById("delid").value;
-
          //   const nr2=document.getSelection._id.value;
-         
             fetch('http://localhost:3000/slet/'+nr3)
            .then(res => console.log('Blog slettet'))
            .catch(err => console.log(err," Kunne ikke slette blog"));
@@ -38,18 +40,12 @@
        async function udskrivAlle1(){
            let data = await getBlogs();
            console.log(data);
-
-
            let id = "0";
            let html=`<table id="kategoriTable">`;
            data.forEach(blog => { 
-            
          //dato tjek
          const date = new Date();
-         console.log("i dag "+date);
-         var d=new Date(blog.expire); 
-         console.log("mad dag "+ d);
-
+         var d=new Date(blog.expire);
          if (d < date ){
             html+=`<tr class="alert"><td>`;
            }else{
@@ -71,27 +67,20 @@
            html+="</td></tr>";
         });
         html+="</table>";
-        
         document.getElementById("tekstfelt").innerHTML = html;
-
         //oldFoodAllert();
-
     }
 
     async function overskredet(){
       let data = await getBlogs();
       console.log(data);
-
       let id = "0";
       let html=`<table id="kategoriTable">`;
       data.forEach(blog => { 
-       
-    // her testes
     const date = new Date();
     console.log("i dag "+date);
     var d=new Date(blog.expire); 
     console.log("mad dag "+ d);
-
     if (d.getDate() < (date.getDate()+3) ){
       html+=`<tr class="alert"><td>`;
       html+=blog.food;
@@ -104,37 +93,58 @@
       html+="</td>";
       html+="<td>";
       html+=d.getDate()+"/"+(d.getMonth()+1);
-      html+="</td>";
-      html+="<td>";
-      html+="<button type='button' onclick=getDelete('"+blog._id+"');>Slet</button>";
+      // html+="</td>";
+      // html+="<td>";
+      // html+="<button type='button' onclick=getDelete('"+blog._id+"');>Slet</button>";
       html+="</td></tr>";
    }
    });
    html+="</table>";
-   
    document.getElementById("oldFood").innerHTML = html;
-
 }
 
-async function oldFoodAllert(){
+async function oldFoodAlert(){
    let data = await getBlogs();
    let oldFood = `Udløber snart: \n`;
    let anyOldFood = false;
-
    data.forEach(blog => {     
  //dato tjek
  const date = new Date();
- console.log("i dag "+date);
  var d=new Date(blog.expire); 
- console.log("mad dag "+ d);
-
  if (d < date ){
     oldFood+=blog.food+"\n";
     anyOldFood=true;
-    
    }
 });
    if (anyOldFood=true){alert(oldFood);}
+}
+
+
+async function deleteOldFood(){
+   let data = await getBlogs();
+   const today = new Date();
+   data.forEach(blog => { 
+      var d=new Date(blog.expire); 
+      console.log("trying hard to delete "+d);
+      if (d < (today-28) ){
+         console.log("slettet");
+         getDelete(blog._id);
+      }
+   })
+}
+
+async function alertOldFood(){
+   let data = await getBlogs();
+   const today = new Date();
+   let n =0;
+   data.forEach(blog => { 
+      var d=new Date(blog.expire);    
+      if (d < (today-28) && n <= 0 ){
+         n =1;
+         alert("Der er mad som er 30 dage over holdbarhed ");
+         document.getElementById('sletGammelMad').innerHTML="<button type='button' id='knap' onclick='deleteOldFood();'>Slet mad som er 30 dage over udløbsdato</button>";
+      }
+   })
 }
   
   

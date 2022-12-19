@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <script  src="code.js"></script>
     </head> 
-    <body onload="udskrivAlle1();" >
+    <body onload="loadKategorier();" >
 
         <div class="sidebar open">
 
@@ -61,12 +61,14 @@
       <label>Udløbsdato:</label>
       <input type="date" id="expire" name="expire">
      
-         <button type="button" id="knap" onclick="createBlogFunktion();">Klik her</button>
+         <button type="button" id="knap" onclick="createBlogFunktion();">Tilføj</button>
        </form>
      </div>
-
-     <div class="kategoriIndhold">
-     <table class="kategoriTableHead">
+    <div class="kategoriIndhold" id="sletGammelMad">
+        
+    </div>
+        <div class="kategoriIndhold">
+        <table class="kategoriTableHead">
         <tr>
             <td>Mad</td>
             <td>Kategori</td>
