@@ -1,26 +1,4 @@
 
-      function udskrivAlle(){
-         const blogs = [
-          {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-          {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-          {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-         ];
-          let html=`<table>`;
-          blogs.forEach(blog => { 
-             html+="<tr><td>";
-             html+=blog.title;
-             html+="</td>";
-             html+="<td>";
-             html+=blog.snippet;
-             html+="</td></tr>";
-             console.log(blog.title);
-             console.log(blog.snippet);
-          });
-          html+="</table>";
-          //var x = document.getElementById("tekstfelt");
-          document.querySelector("p").innerHTML = html;
-          //document.getElementById("tekstfelt2").innerHTML="Hej";
-        }
   
         function get(){
            const nr=document.getElementById("id").value;
