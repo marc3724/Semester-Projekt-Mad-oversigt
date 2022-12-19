@@ -17,7 +17,7 @@ const Category = mongoose.model('Category', {
     required: true,
   },
   expire: {
-    type: String,
+    type: Date,
     required: true,
   }
 });
