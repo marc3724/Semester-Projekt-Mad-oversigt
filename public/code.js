@@ -121,26 +121,30 @@ async function oldFoodAlert(){
 
 
 async function deleteOldFood(){
+   var date = new Date(); // Now
+   date.setDate(date.getDate() - 30); // Set now + 30 days
    let data = await getBlogs();
-   const today = new Date();
+   var today = new Date();
    data.forEach(blog => { 
       var d=new Date(blog.expire); 
-      console.log("trying hard to delete "+d);
-      if (d < (today-28) ){
-         console.log("slettet");
+      if (d < date ){
          getDelete(blog._id);
       }
    })
 }
 
 async function alertOldFood(){
+   var date = new Date(); // Now
+   date.setDate(date.getDate() - 30); // Set now + 30 days as the new date
+   console.log(date);
    let data = await getBlogs();
-   const today = new Date();
    let n =0;
    data.forEach(blog => { 
-      var d=new Date(blog.expire);    
-      if (d < (today-28) && n <= 0 ){
-         n =1;
+      let d=new Date(blog.expire);  
+      console.log(d); 
+      console.log(date)
+      if (d < date && n <= 0 ){
+                  n =1;
          alert("Der er mad som er 30 dage over holdbarhed ");
          document.getElementById('sletGammelMad').innerHTML="<button type='button' id='knap' onclick='deleteOldFood();'>Slet mad som er 30 dage over udløbsdato</button>";
       }
