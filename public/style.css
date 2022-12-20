@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,8 @@
 body {
     height: 100vh;
     font-family:system-ui, sans-serif;
+    background-image:url('img/BackgroundFood.jpeg');
+    background-size:cover;
 }
  /*----nav start----*/
 
@@ -195,37 +198,59 @@ li a{
 
 /*----Index Slut----*/
 
-
-
-/*----Header start----*/
-
-
-
-/*----Header Slut----*/
-
-/*Tabeller*/
+/*----Tabeller Start----*/
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 600px;
-  }
+}
+.kategoriTableHead{
+    width: auto;
+    border-collapse: collapse;
+}
+
+.kategoriTableHead td:last-child{
+    border:none;
+}
+
+.kategoriIndhold, .kategoriInputs { 
+    margin-left: 300px;
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+#kategoriTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#kategoriTable td{
+    width: 20%;
+    
+}
   
-  td, th {
+td, th {
     width:600px;
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
     
-  }
+}
   
-  tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #dddddd;
 
-  }
+}
 
-  input{
+.alert{
+color: red;
+}
+
+input{
     border: 1px solid;
     color: black;
     min-width: 10px;
-  }
+}
+
+/*----Tabeller Slut----*/

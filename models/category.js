@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const blogSchema = new Schema({
+  _id: {
+    type: String,
+    required: true,
+  },
   food: {
     type: String,
     required: true,
@@ -20,5 +24,5 @@ const blogSchema = new Schema({
   }
 });
 
-const Category = mongoose.model('Category', blogSchema);
+const Category = mongoose.model('Categories', blogSchema);
 module.exports = Category;

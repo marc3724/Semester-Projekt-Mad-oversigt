@@ -1,7 +1,26 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-const Category = require('./models/category');
+//const Category = require('./models/category');
+//Product model
+const Category = mongoose.model('Category', {
+  food: {
+    type: String,
+    required: true,
+  },
+  kategori: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  expire: {
+    type: Date,
+    required: true,
+  }
+});
 
 // express variabel
 const app = express();
@@ -90,17 +109,33 @@ app.get('/dyn', (req,res)=>{
           .catch(err => console.error('error:' + err));
       });
       
+//her testes
+
+// User model
+// const User = mongoose.model('Categories', {
+//   name: { type: String },
+//   age: { type: Number }
+// });
+
       app.get('/slet/:id', (req, res) => {
+        console.log('slet aktiveret -------------------');
+
+
+
         const id = req.params.id;
+
+        Category.findByIdAndDelete(id, function (err, docs) {
+          if (err){
+              console.log(err)
+          }
+          else{
+              console.log("Deleted : ", docs);
+          }
+      });
         
-        Blog.findByIdAndDelete(id)
-          .then(result => {
-            res.json({ redirect: '/blogs' });
-          })
-          .catch(err => {
-            console.log(err);
-          });
-      });    
+      }); 
+
+ 
 
 app.use((req,res)=>{
     res.render('index2');
