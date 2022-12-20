@@ -243,6 +243,10 @@ tr:nth-child(even) {
 
 }
 
+.alert{
+color: red;
+}
+
 input{
     border: 1px solid;
     color: black;
